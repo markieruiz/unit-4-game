@@ -1,0 +1,20 @@
+h1 {
+    background: brown;
+    color: white;
+    
+}
+
+
+.crystals{
+    display: flex;
+   justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.crystal{
+border: 1px solid green;
+height: 100px;
+width: 100px;
+margin-right: 10px;
+}

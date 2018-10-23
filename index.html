@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Crystals Collector Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+                <div class="col-md-4">
+                    <h1>CrystalsCollector!</h1>
+                </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+                <p>You will be given a random number at the start of each game.</p>
+
+                <p>There are four crystals below. By clicking on a crystal you will add a specific amount of point to your total score.</p>
+            
+                <p>You win the game by matching your total score to random number, you lose the game if your total score goes above the random number.</p>
+            
+                <p>The value of each crystal is hidden from you until you click on it.</p>
+            
+                <p>Each time when the game starts, the game will change the value of each crystal.</p>
+                    
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2">
+                <div class="rand_num_box" id="rand_num_box">
+                    39
+                </div>
+            </div>
+            <div class="col-md-1">
+                    <div class="wins" id="wins">
+                        Wins :                       
+                    </div>
+                    <div class="losses" id="losses">
+                        Losses :                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <div class="container">
+        <div class="row"> 
+                <div class="crystals">
+
+                </div>
+             </div> 
+        </div> 
+
+     <div class="container">
+        <div class="row">
+            <div class="col-md-2">
+                        Your total score is: 
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2" id="running_ttl">
+                    0
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="assets/javascript/game.js"></script>
+</body>
+
+</html>
+ 
+
+<!-- psuedo code
+
+Create 4 crystals
+    each crystal is assinged a random number between 1-12
+    each crystal get a new random number afer a win or loss or at the start of the game
+
+random number box
+    the random number should be between 19-120
+    the random number gets a new number after a win or loss or at the start of the game
+
+Need a running total box
+
+On button blick per crystal add the number to the running total box
+When running total box equals random number box, player wins
+    add win
+When running total box is greater than random number box, player losses
+    add to losses
+    
+variables
+rand_num__crystal
+wins
+losses
+rand_num__crystal
+running total
+
+what about duplicate random numbers
+
+
+
+-->
