@@ -1,9 +1,13 @@
 h1 {
     background: brown;
     color: white;
-    
 }
 
+.col-md-5 {
+    color:green;
+    background: tan;
+    padding-left: 15px;
+}
 
 .crystals{
     display: flex;
