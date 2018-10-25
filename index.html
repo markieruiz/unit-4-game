@@ -5,82 +5,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Crystals Collector Game</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
 </head>
+<body class="wallpaper">
 
-<body>
-    <div class="container" style="padding-left: 0px">
+	<div class="container">
         <div class="row">
-                <div class="col-md-4">
-                    <h1>CrystalsCollector!</h1>
-                </div>
+            <h1 class="header">Crystals Collector!</h1>
         </div>
-    </div>
+            <div class="row">
+                <div class="col-lg-6 instruction">
+                        <p>You will be given a random number at the start of the game.</p>
+						<p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
+						<p>You win the game by matching your total score to random number, you lose the game if your total score goes above the random number.</p>
+						<p>The value of each crystal is hidden from you until you click on it.</p>
+						<p>Each time when the game starts, the game will change the values of each crystal. </p>
+				</div>
+			</div>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-md-5" style="padding-left: 0px">
-                <p>You will be given a random number at the start of each game.</p>
+            <div class="row">
+					<div class="col-lg-6 randomNumber">randomNumber</div>
+					<div class = "col-lg-1"></div>
+					<div class="col-lg-2 totalWL">
+						<div class="row wins">Wins: </div>
+						<div class="row losses">Losses: </div>
+					</div>
+			</div>
 
-                <p>There are four crystals below. By clicking on a crystal you will add a specific amount of point to your total score.</p>
-            
-                <p>You win the game by matching your total score to random number, you lose the game if your total score goes above the random number.</p>
-            
-                <p>The value of each crystal is hidden from you until you click on it.</p>
-            
-                <p>Each time when the game starts, the game will change the value of each crystal.</p>
-                    
-            </div>
-        </div>
-    </div>
+            <div class="row"> 
+                <div class="crystals"></div>
+            </div> 
 
-    <div class="container">
-        <div class="row">
-            <div class="col-md-2">
-                <div class="rand_num_box" id="rand_num_box">
-                    39
-                </div>
-            </div>
-            <div class="col-md-1">
-                    <div class="wins" id="wins">
-                        Wins :                       
-                    </div>
-                    <div class="losses" id="losses">
-                        Losses :                        
-                    </div>
-                </div>
-            </div>
-        </div>
+            <div class="row"> 
+				<div class="col-lg-6 totalScore">Your total score is: </div>
+			</div>
+			<br>
+			<div class="row"> 
+				<div class="col-lg-6 running_ttl">Running Sum</div>
+			</div>
 
-    <div class="container">
-        <div class="row"> 
-                <div class="crystals">
+    </div> 
 
-                </div>
-             </div> 
-        </div> 
-
-     <div class="container">
-        <div class="row">
-            <div class="col-md-2">
-                        Your total score is: 
-            </div>
-        </div>
-    </div>
-
-    <div class="container">
-        <div class="row">
-            <div class="col-md-2" id="running_ttl">
-                    0
-            </div>
-        </div>
-    </div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="assets/javascript/game.js"></script>
 </body>
 
