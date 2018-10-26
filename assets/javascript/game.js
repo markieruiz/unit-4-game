@@ -7,9 +7,15 @@ var images = ['assets/images/img1.png',
 
 reset ();
 
+function getRandom(){
+    var randomNum = Math.floor(Math.random() * 11) + 1;
+    return randomNum;
+}
+
 function reset () {
     var rand_num_crystal;
     var running_ttl = 0;
+    var crystalNumArray = [];
 
     rand_num_box = Math.floor(Math.random() * 102) + 19;
     console.log(rand_num_box);
@@ -17,12 +23,22 @@ function reset () {
     $(".randomNumber").html(rand_num_box);
     $(".running_ttl").html([running_ttl]); 
 
-
     for (var i = 0; i < 4; i++){
-        var rand_num_crystal = Math.floor(Math.random() * 11) + 1;
+        var rand_num_crystal = getRandom();
         var crystal = $("<div>");
-        console.log(rand_num_crystal)
+        console.log(rand_num_crystal);
 
+        if(crystalNumArray.indexOf(rand_num_crystal)!= -1) {
+            console.log("before" + crystalNumArray);
+            crystalNumArray.push(rand_num_crystal);
+            console.log(crystalNumArray);
+        }
+        else {
+            var nonDuplicate = getRandom();
+            crystalNumArray.push(nonDuplicate);
+            console.log("nonduplicate " + crystalNumArray);
+        }
+        
         crystal.attr({
             "class": 'crystal',
             "data-random": rand_num_crystal
