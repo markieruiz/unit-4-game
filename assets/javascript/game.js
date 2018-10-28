@@ -27,16 +27,11 @@ function reset () {
         var rand_num_crystal = getRandom();
         var crystal = $("<div>");
         console.log(rand_num_crystal);
+        console.log(crystalNumArray);
 
         if(crystalNumArray.indexOf(rand_num_crystal)!= -1) {
-            console.log("before" + crystalNumArray);
             crystalNumArray.push(rand_num_crystal);
-            console.log(crystalNumArray);
-        }
-        else {
-            var nonDuplicate = getRandom();
-            crystalNumArray.push(nonDuplicate);
-            console.log("nonduplicate " + crystalNumArray);
+            console.log("after push" + crystalNumArray);
         }
         
         crystal.attr({
